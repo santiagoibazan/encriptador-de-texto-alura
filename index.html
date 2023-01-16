@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de Texto - Challenge Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style-new.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><img src="img/logo.svg"></h1>
+    </header>
+    <main>
+        <div class="divisor">
+            <form class="form">
+                <textarea class="textarea" id="texto" cols="70" rows="10" onblur="getVal()"></textarea>
+            </form>       
+            <section class="botones">
+                <p>Solo letras en minusculas y sin acentos.</p>
+                <button class="boton-en" id="encriptar">Encriptar</button>
+                <button class="boton-des" id="desencriptar">Desencriptar</button>
+            </section>
+        </div>
+        <section class="area-resultado" id="area-resultado">
+            <img src="img/Muneco.svg" class="muneco">
+            <p class="noMensaje">Ningún mensaje fue encontrado</p>
+            <p class="tipTexto">Ingresa el texto que deseas encriptar o desencriptar</p>
+        </section>
+    </main>
+    <footer>
+        <p class="piepagina">Encriptador de texto - Challenge Alura</p>
+        <p class="autor">Santiago Ismael Bazán</p>
+    </footer>
+</body>
