@@ -4,15 +4,22 @@ body{
 
 .logo{
     position: absolute;
-    margin: 1em;
+    margin: 1.5em;
+}
+
+main{
+    width: 100%;
+}
+
+.divisor{
+    display: inline-block;
+    width: 60%;
 }
 
 form{
-    width: 60%;
-    height: 100%;
-    display: inline-block;
+    width: 90%;
     vertical-align: top;
-    margin: 5em 0 0 4em;
+    margin: 5em 0 1em 5em;
 }
 
 .textarea{
@@ -21,31 +28,69 @@ form{
     text-align: center;
     font-size: 18px;
     padding: 1em;
-    width: 50%;
+    width: 90%;
     height: 300px;
     max-width: 90%;
     resize: height;
+    border: none;
 }
 
 .area-resultado{
-    padding: 6em 0;
+    height: 450px;
+    padding: 1em;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid #F3F5FC;
     border-radius: 1em;
-    margin: 1em;
+    margin: 2em auto;
+    vertical-align: top;
+    box-shadow: 5px 5px 10px #d3d6df;
 }
 
 .area-resultado img{
     width: 70%;
+    position: relative;
+    top: 5em;
+    left: 2em;
 }
 
 .area-resultado p{
+    position: relative;
     text-align: center;
     padding: 5px;
+    top: 7em;
 }
 
 .botones{
-    padding: 0 0 1em 3em;
+    padding: 0 0 0 5em;
+    margin: 1em;
+}
+
+.botones p{
+    font-size: 19px;
+}
+
+.botones p::before{
+    content: url(img/excl.svg);
+}
+
+.botones button{
+    margin: 1em 1em 0.5em 0;
+    padding: 1em;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.boton-en{
+    border: 1px solid white;
+    background-color: #0A3871;
+    color: white;
+}
+
+.boton-des{
+    border: 1px solid #0A3871;
+    background-color: white;
+    color: #0A3871;
 }
 
 footer{
