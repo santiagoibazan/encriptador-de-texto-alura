@@ -10,6 +10,7 @@ var buttonDesencriptar = document.getElementById("desencriptar");
 var botonCopiar = document.createElement("button");
 botonCopiar.innerHTML = "Copiar";
 botonCopiar.id = "botonCopiar";
+salida.id = "textoResultado"
 var areaResultado = document.getElementById("area-resultado");
 
 function getVal(){
@@ -24,6 +25,11 @@ function encriptarTexto(){
         textoEncriptado = textoEncriptado + encriptarLetra(texto[i]);
     }
     salida.innerText = textoEncriptado;
+    if (texto === "") {
+        ocultar(false);
+    } else {
+        ocultar(true)
+    }
     areaResultado.appendChild(salida);
     areaResultado.appendChild(botonCopiar);
 }
@@ -36,6 +42,11 @@ function desencriptarTexto(){
         textoDesencriptado = textoDesencriptado + encriptarLetra(texto[i]);
     }
     salida.innerText = textoDesencriptado;
+    if (texto === "") {
+        ocultar(false);
+    } else {
+        ocultar(true)
+    }
     areaResultado.appendChild(salida);
     areaResultado.appendChild(botonCopiar);
 }
@@ -118,16 +129,30 @@ function encriptarLetra(letra) {
             }
 		default:
 			return letra;
-	}
-}
+	};
+};
 
 function copiarTexto(){
     if (x) {
         navigator.clipboard.writeText(textoEncriptado);
     } else {
         navigator.clipboard.writeText(textoDesencriptado);
-    }
-}
+    };
+};
+
+function ocultar(o){
+    var noAccion = document.getElementById("noAccion");
+    if (o) {
+        noAccion.style.display = "none"
+        botonCopiar.style.display = "block";
+        salida.style.display = "block"
+        
+    } else {
+        noAccion.style.display = "block";
+        botonCopiar.style.display = "none";
+        salida.style.display = "none"
+    };
+};
 
 buttonEncriptar.onclick = encriptarTexto;
 buttonDesencriptar.onclick = desencriptarTexto;
